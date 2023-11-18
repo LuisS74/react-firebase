@@ -1,0 +1,48 @@
+/* Agrega estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  thead {
+    background-color: #4285f4;
+    color: #fff;
+  }
+  
+  thead th, tbody td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  
+  /* Estilos adicionales para la clase .home-container */
+  .home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px;
+  }
+  
+  .button {
+    background-color: #4285f4;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Añade estilos para que el botón tenga un aspecto más atractivo */
+  .button:hover {
+    background-color: #3a77cc;
+  }
+  
+  
