@@ -74,7 +74,7 @@ const Home = () => {
             <tr>
               <th>Email</th>
               <th>Rol</th>
-              <th>Contraseña</th>
+              <th>Contraseña</th> {/* No se recomienda mostrar o almacenar contraseñas */}
             </tr>
           </thead>
           <tbody>
@@ -82,7 +82,7 @@ const Home = () => {
               <tr key={index}>
                 <td>{usuario.Email}</td>
                 <td>{usuario.Rol}</td>
-                <td>{usuario.Contraseña}</td>
+                <td>{usuario.Contraseña}</td> {/* Esto debería eliminarse por seguridad */}
               </tr>
             ))}
           </tbody>
