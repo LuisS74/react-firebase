@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { app } from "./database/fb";
 import Home from "./Home";
 import Logueo from "./Login";
+import Registro from "./Registration"
+import Bienvenida from "./Bienvenida";
 
 function App() {
   const [usuario, setUsuario] = useState(null);
@@ -26,6 +28,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/login" element={usuario ? <Navigate to="/home" /> : <Logueo setUsuario={setUsuario} />} />
+        <Route path="/registro" element={<Registro />} /> {/* Nueva ruta para registro */}
+        <Route path="/bienvenida" element={<Bienvenida />} />
         <Route path="/home" element={usuario ? <Home /> : <Navigate to="/login" />} />
         <Route path="*" element={<Navigate to={usuario ? "/home" : "/login"} />} />
       </Routes>

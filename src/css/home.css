@@ -15,6 +15,10 @@ table {
     text-align: left;
     border-bottom: 1px solid #ddd;
   }
+
+  tbody td{
+    background-color: white;
+  }
   
   
   /* Estilos adicionales para la clase .home-container */
