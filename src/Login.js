@@ -19,7 +19,7 @@ const Login = (props) => {
         usuarioFirebase.user.getIdToken().then((token) => {
           console.log("Token de usuario:", token);
         });
-        navigate('/home');
+        navigate('/bienvenida');
       })
       .catch((error) => {
         setErrorMensaje("Ha ocurrido un problema al iniciar sesión. Intenta de nuevo.");

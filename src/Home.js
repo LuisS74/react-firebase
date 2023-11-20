@@ -20,11 +20,10 @@ const Home = () => {
         const q = query(usuariosRef, where("Email", "==", user.email));
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
-          // Asumiendo que el campo de rol es 'Rol'
           if (doc.data().Rol === 'admin') {
             setEsAdmin(true);
           } else {
-            navigate("/login"); // o cualquier otra ruta para usuarios no administradores
+            navigate("/bienvenida"); 
           }
         });
         setCargando(false);
@@ -74,7 +73,7 @@ const Home = () => {
             <tr>
               <th>Email</th>
               <th>Rol</th>
-              <th>Contraseña</th> {/* No se recomienda mostrar o almacenar contraseñas */}
+              <th>Contraseña</th> 
             </tr>
           </thead>
           <tbody>
@@ -82,7 +81,7 @@ const Home = () => {
               <tr key={index}>
                 <td>{usuario.Email}</td>
                 <td>{usuario.Rol}</td>
-                <td>{usuario.Contraseña}</td> {/* Esto debería eliminarse por seguridad */}
+                <td>{usuario.Contraseña}</td> 
               </tr>
             ))}
           </tbody>

@@ -15,7 +15,7 @@ const Registro = () => {
         const db = getFirestore(app);
         addDoc(collection(db, "usuarios"), {
           Email: correo,
-          Rol: 'admin', 
+          Rol: 'usuario', 
           Contraseña: password
         })
         .then(() => {
