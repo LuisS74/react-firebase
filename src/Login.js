@@ -31,19 +31,16 @@ const Login = (props) => {
     e.preventDefault();
     const correo = e.target.emailField.value;
     const password = e.target.passwordField.value;
-
-    // Validar campos vacíos
+    
     if (!correo || !password) {
       setCamposVaciosError(true);
       setErrorMensaje("Ambos campos son obligatorios. Por favor, completa todos los campos.");
       return;
     }
 
-    // Limpiar mensajes de error y advertencias
     setCamposVaciosError(false);
     setErrorMensaje("");
 
-    // Solo iniciar sesión, no hay lógica para crear un nuevo usuario aquí.
     iniciarSesion(correo, password);
   };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { app } from './database/fb'; // Asegúrate de que la ruta sea correcta
+import { app } from './database/fb'; 
 
 const Navbar = ({ usuario, rol }) => {
   const navigate = useNavigate();

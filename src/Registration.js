@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { app } from "./database/fb"; // Asegúrate de que esta ruta sea correcta para tu configuración de Firebase
+import { app } from "./database/fb"; 
 import { useNavigate } from 'react-router-dom';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
@@ -11,7 +11,6 @@ const Registro = () => {
     app.auth()
       .createUserWithEmailAndPassword(correo, password)
       .then((usuarioFirebase) => {
-        // Guardar datos del usuario en Firestore
         const db = getFirestore(app);
         addDoc(collection(db, "usuarios"), {
           Email: correo,
@@ -20,7 +19,7 @@ const Registro = () => {
         })
         .then(() => {
           console.log("Usuario registrado en Firestore");
-          navigate('/bienvenida');// Redirigir al usuario a la página de inicio tras el registro
+          navigate('/bienvenida');
         })
         .catch((error) => {
           console.error("Error al guardar usuario en Firestore:", error.message);

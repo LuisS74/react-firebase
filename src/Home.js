@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { app } from "../src/database/fb"; // Asegúrate de que esta ruta sea correcta
+import { app } from "../src/database/fb"; 
 import { useNavigate } from 'react-router-dom';
 import "../src/css/home.css";
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';

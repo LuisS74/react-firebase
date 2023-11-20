@@ -1,5 +1,5 @@
 import React from "react";
-import { app } from "./database/fb"; // Asegúrate de que esta ruta sea correcta
+import { app } from "./database/fb"; 
 import { useNavigate } from 'react-router-dom';
 
 const Bienvenida = () => {
